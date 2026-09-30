@@ -55,8 +55,8 @@
                     <img src="images/profile.jpg" alt="Goodluck Paul Okoro - Software Engineering Student">
                 </div>
                 <div class="floating-card floating-card-1">
-                    <span class="floating-number">5+</span>
-                    <span class="floating-label">Projects Built</span>
+                    <span class="floating-number">3</span>
+                    <span class="floating-label">Live Projects</span>
                 </div>
                 <div class="floating-card floating-card-2">
                     <span class="floating-number">ADSE</span>
@@ -253,115 +253,107 @@
     <section class="section section-white" id="projects">
         <div class="container">
             <div class="section-header scroll-reveal">
-                <span class="badge">Portfolio</span>
-                <h2 class="section-title">My Projects</h2>
+                <span class="badge">Selected Work</span>
+                <h2 class="section-title">Latest Live Projects</h2>
                 <div class="divider"></div>
-            </div>
-            <div class="project-filters scroll-reveal">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="website">Websites</button>
-                <button class="filter-btn" data-filter="webapp">Web Apps</button>
-                <button class="filter-btn" data-filter="desktop">Desktop Apps</button>
-                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
-                <button class="filter-btn" data-filter="uiux">UI/UX</button>
+                <p class="projects-intro">A curated look at three recent products I designed and built, from a full-stack ticketing workflow to content publishing and interactive web experiences.</p>
             </div>
             <div class="projects-grid" id="projects-grid">
-                <div class="project-card" data-category="website">
-                    <div class="project-image">
-                        <img src="images/church.jpg" alt="A Church Website">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">Source Code</a>
-                        </div>
+                <article class="project-card scroll-reveal">
+                    <div class="project-image project-image--prom">
+                        <img src="images/prom-ticketing.png" alt="Blue and gold poster for the 2K26 Prom Night" loading="lazy">
+                        <span class="project-status"><span class="status-dot"></span>Live</span>
+                        <span class="project-number">01</span>
                     </div>
                     <div class="project-info">
-                        <span class="project-type">Website</span>
-                        <h3>A Church Website</h3>
-                        <p>A modern, responsive church website with latest sermons, about the church, donation/giving page projected with the church account names/numbers.</p>
+                        <div class="project-meta">
+                            <span class="project-type">Full-Stack Platform</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3>2K26 Prom Night Ticketing</h3>
+                        <p>An end-to-end event ticketing system with registration, payment receipt uploads, admin approval, QR ticket generation, attendee search, analytics, and scanner-based check-in.</p>
                         <div class="project-tech">
                             <span>React</span>
-                            <span>TailWind CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="webapp">
-                    <div class="project-image">
-                        <img src="images/webApp.jpg" alt="E-Commerce Web App">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">Source Code</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type">Web Application</span>
-                        <h3>E-Commerce Web App</h3>
-                        <p>A full-stack E-Commerce web application with user authentication, cart functionalities, and purchase.</p>
-                        <div class="project-tech">
-                            <span>React</span>
+                            <span>Express</span>
                             <span>Supabase</span>
-                            <span>TailWind CSS</span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://www.thepromcalabar.com/" target="_blank" rel="noopener noreferrer" class="project-action project-action-primary" aria-label="Visit the live 2K26 Prom Night Ticketing website">
+                                Visit live site
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                            </a>
+                            <a href="https://github.com/Gokoro-17/PromTicketing" target="_blank" rel="noopener noreferrer" class="project-action project-action-secondary" aria-label="View the PromTicketing source code on GitHub">
+                                GitHub
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.3 4 5 5 0 0 0 19.1.5S17.9.1 15 2a13.4 13.4 0 0 0-7 0C5.1.1 3.9.5 3.9.5A5 5 0 0 0 3.7 4a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.5 6.6 6.8 7A4.8 4.8 0 0 0 8 18v4m-1-6c-5 1.5-5-2.5-7-3"/></svg>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="project-card" data-category="desktop">
-                    <div class="project-image">
-                        <img src="images/desktopApp.jpg" alt="Complaint Management System">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">Download</a>
-                            <a href="#" class="project-link">Source Code</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-type">Desktop Application</span>
-                        <h3>Complaint Management System</h3>
-                        <p>A CRUD desktop application for managing complaints records with a clean user interface and database integration.</p>
-                        <div class="project-tech">
-                            <span>JavaFX</span>
-                            <span>Scene Builder</span>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="mobile">
-                    <div class="project-image">
-                        <img src="images/mobileApp.jpg" alt="E-Commerce Mobile App">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">View Design</a>
-                            <a href="#" class="project-link">Source Code</a>
-                        </div>
+                </article>
+
+                <article class="project-card scroll-reveal">
+                    <div class="project-image project-image--mcn">
+                        <img src="images/mcn-diocese.jpg" alt="Methodist Church Nigeria emblem" loading="lazy" class="project-image-logo">
+                        <span class="project-status"><span class="status-dot"></span>Live</span>
+                        <span class="project-number">02</span>
                     </div>
                     <div class="project-info">
-                        <span class="project-type">Mobile Application</span>
-                        <h3>E-Commerce Mobile App</h3>
-                        <p>A fully shopping app with cart and checkout system.</p>
+                        <div class="project-meta">
+                            <span class="project-type">Content Platform</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3>Methodist Cathedral of Favour</h3>
+                        <p>A responsive church platform with sermons, events, leadership, gallery, giving, and a secure Supabase-backed dashboard for publishing and managing live content.</p>
                         <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>REST API</span>
-                            <span>Firebase</span>
-                            <span>Paystack/Stripe</span>
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>Supabase</span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://mcn-diocese-website.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action project-action-primary" aria-label="Visit the live Methodist Cathedral of Favour website">
+                                Visit live site
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                            </a>
+                            <a href="https://github.com/Gokoro-17/mcn-diocese-website" target="_blank" rel="noopener noreferrer" class="project-action project-action-secondary" aria-label="View the mcn-diocese-website source code on GitHub">
+                                GitHub
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.3 4 5 5 0 0 0 19.1.5S17.9.1 15 2a13.4 13.4 0 0 0-7 0C5.1.1 3.9.5 3.9.5A5 5 0 0 0 3.7 4a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.5 6.6 6.8 7A4.8 4.8 0 0 0 8 18v4m-1-6c-5 1.5-5-2.5-7-3"/></svg>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="project-card" data-category="uiux">
-                    <div class="project-image">
-                        <img src="images/Ui.jpg" alt="Banking App UI Design">
-                        <div class="project-overlay">
-                            <a href="https://www.figma.com/design/Slgf6IFe1DSDJNWXjevt0F/Free-Banking-Mobile-App-Ui-Kit-With-light---Dark-Mode-High-Quality-Ui-43--Screen-template--Community-?node-id=1-4&t=2A4jHMkEodTkScKb-1" target="_blank" rel="noopener noreferrer" class="project-link">View Design</a>
-                            <a href="https://www.figma.com/design/Slgf6IFe1DSDJNWXjevt0F/Free-Banking-Mobile-App-Ui-Kit-With-light---Dark-Mode-High-Quality-Ui-43--Screen-template--Community-?node-id=1-4&t=2A4jHMkEodTkScKb-1" target="_blank" rel="noopener noreferrer" class="project-link">Figma</a>
-                        </div>
+                </article>
+
+                <article class="project-card scroll-reveal">
+                    <div class="project-image project-image--date">
+                        <img src="images/date-invitation.png" alt="Portrait featured in the interactive date invitation" loading="lazy">
+                        <span class="project-status"><span class="status-dot"></span>Live</span>
+                        <span class="project-number">03</span>
                     </div>
                     <div class="project-info">
-                        <span class="project-type">UI/UX Design</span>
-                        <h3>Banking App UI Design</h3>
-                        <p>A comprehensive UI/UX design for a mobile banking application featuring wireframes, high-fidelity mockups, and interactive prototypes.</p>
+                        <div class="project-meta">
+                            <span class="project-type">Interactive Frontend</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3>Date Invitation</h3>
+                        <p>A playful, mobile-first invitation experience that guides a guest through date, time, food, and activity choices before creating a shareable plan with animations and confetti.</p>
                         <div class="project-tech">
-                            <span>Figma</span>
-                            <span>UI/UX</span>
-                            <span>Prototyping</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Web Share API</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://date-invitation.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action project-action-primary" aria-label="Visit the live Date Invitation website">
+                                Visit live site
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                            </a>
+                            <a href="https://github.com/Gokoro-17/DateInvitation" target="_blank" rel="noopener noreferrer" class="project-action project-action-secondary" aria-label="View the DateInvitation source code on GitHub">
+                                GitHub
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.3 4 5 5 0 0 0 19.1.5S17.9.1 15 2a13.4 13.4 0 0 0-7 0C5.1.1 3.9.5 3.9.5A5 5 0 0 0 3.7 4a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.5 6.6 6.8 7A4.8 4.8 0 0 0 8 18v4m-1-6c-5 1.5-5-2.5-7-3"/></svg>
+                            </a>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>

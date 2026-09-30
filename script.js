@@ -1,6 +1,6 @@
 /**
  * Goodluck Paul Okoro - Portfolio JavaScript
- * Handles navigation, form validation, project filtering, scroll animations, and UI interactions.
+ * Handles navigation, form validation, scroll animations, and UI interactions.
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     const backToTop = document.getElementById('back-to-top');
     const yearSpan = document.getElementById('year');
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
     const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
     const contactForm = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
@@ -118,42 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     scrollRevealElements.forEach(el => {
         revealObserver.observe(el);
-    });
-
-    // ============================================
-    // PROJECT FILTERING
-    // ============================================
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Update active button
-            filterBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-
-            const filter = this.getAttribute('data-filter');
-
-            // Filter cards with animation
-            projectCards.forEach(card => {
-                const category = card.getAttribute('data-category');
-
-                if (filter === 'all' || category === filter) {
-                    card.classList.remove('hidden');
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 50);
-                } else {
-                    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        card.classList.add('hidden');
-                    }, 300);
-                }
-            });
-        });
     });
 
     // ============================================
