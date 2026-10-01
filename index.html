@@ -1,627 +1,199 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goodluck Paul Okoro | Developer &amp; Creative Builder</title>
-    <meta name="description" content="Explore Goodluck Paul Okoro's live web projects, development skills, and approach to building useful digital experiences.">
-    <meta name="theme-color" content="#0b1224">
-    <script>try{document.documentElement.dataset.theme=localStorage.getItem('portfolio-theme')||'light'}catch(e){document.documentElement.dataset.theme='light'}</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090909">
+    <meta name="description" content="Goodluck Paul Okoro is a developer building practical websites and web applications. Explore selected work in ticketing, publishing, and interactive experiences.">
+    <title>Goodluck Paul Okoro — Developer</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#home" class="logo" aria-label="Goodluck Paul Okoro, back to home">G<span class="logo-mark">.</span>PO</a>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Work</a></li>
-                <li><a href="#skills" class="nav-link">Toolkit</a></li>
-                <li><a href="#services" class="nav-link">Approach</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle color theme"><span class="theme-moon" aria-hidden="true">☾</span><span class="theme-sun" aria-hidden="true">☀</span></button>
-                <a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
-                <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open navigation" aria-controls="nav-menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a class="wordmark" href="#top" aria-label="Goodluck Paul Okoro, back to top">Goodluck Okoro<span aria-hidden="true">.</span></a>
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">Menu <span aria-hidden="true">+</span></button>
+            <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <a class="nav-resume" href="images/goodluck_paul_okoro_enhanced_resume.pdf" target="_blank" rel="noopener noreferrer">Résumé <span aria-hidden="true">↗</span></a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="hero-eyebrow"><span class="eyebrow-dot"></span> Available for projects &amp; collaboration</span>
-                <h1 class="hero-title">Making ideas <span class="text-accent">feel alive.</span></h1>
-                <p class="hero-subtitle">Hi, I'm Goodluck Paul Okoro — a developer building web experiences people enjoy using.</p>
-                <p class="hero-description">From thoughtful interfaces to the systems behind them, I turn concepts into useful, polished products. Explore my recent work below.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Explore my work <span aria-hidden="true">↗</span></a>
-                    <a href="#contact" class="btn btn-outline-light">Start a conversation</a>
-                </div>
-                <div class="hero-socials">
-                    <a href="https://github.com/Gokoro-17" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
-                    <a href="https://www.linkedin.com/in/goodluck-okoro-ba6459393" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-                    <a href="https://wa.me/2347019127986" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
-                    <a href="mailto:gokoro852@gmail.com" class="social-link" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+    <main id="main">
+        <section class="hero container" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">Developer / Software engineering student</p>
+                <h1 id="hero-title">Goodluck<br>Paul Okoro<span class="title-period">.</span></h1>
+                <p class="hero-intro">I build websites and web applications with a focus on clear interfaces and dependable functionality.</p>
+                <div class="hero-actions">
+                    <a class="button button-light" href="#work">View selected work <span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="mailto:gokoro852@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
                 </div>
             </div>
-            <div class="hero-image-wrapper">
-                <div class="hero-image">
-                    <img src="images/profile.jpg" alt="Portrait of Goodluck Paul Okoro" fetchpriority="high">
-                </div>
-                <div class="floating-card floating-card-1">
-                    <span class="floating-number">03</span>
-                    <span class="floating-label">Featured launches</span>
-                </div>
-                <div class="floating-card floating-card-2">
-                    <span class="floating-number">Build</span>
-                    <span class="floating-label">Design · develop · ship</span>
-                </div>
+            <figure class="hero-portrait">
+                <img src="images/profile.jpg" alt="Portrait of Goodluck Paul Okoro" fetchpriority="high">
+            </figure>
+            <div class="hero-bottom" aria-hidden="true">
+                <span>Selected projects / 2026</span>
+                <span>Scroll to explore ↓</span>
             </div>
-        </div>
-        <div class="hero-scroll-indicator">
-            <a href="#about" class="scroll-link">
-                <span>Discover more</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </a>
-        </div>
-    </section>
+        </section>
 
-    <div class="capability-strip" aria-label="Focus areas">
-        <div class="container capability-inner">
-            <span class="capability-label">What I build</span>
-            <span>Responsive websites</span><span class="capability-star" aria-hidden="true">✦</span>
-            <span>Full-stack apps</span><span class="capability-star" aria-hidden="true">✦</span>
-            <span>Thoughtful interfaces</span><span class="capability-star" aria-hidden="true">✦</span>
-            <span>Real-world tools</span>
-        </div>
-    </div>
+        <section class="section work-section" id="work" aria-labelledby="work-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-index">01 / Work</p>
+                    <div>
+                        <h2 id="work-title">Selected work</h2>
+                        <p>Three live projects across event ticketing, content publishing, and interactive design.</p>
+                    </div>
+                </div>
 
-    <!-- About Section -->
-    <section class="section section-light" id="about">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <span class="badge">01 / About</span>
-                <h2 class="section-title">Curious by nature. <span>Builder by choice.</span></h2>
-                <div class="divider"></div>
-            </div>
-            <div class="about-grid">
-                <div class="about-text scroll-reveal">
-                    <p class="body-large">I'm <strong>Goodluck</strong>, a software engineering student at <strong>Aptech</strong> and a hands-on developer who loves seeing an idea become something people can actually use.</p>
-                    <p>My favorite projects sit at the intersection of clear design and dependable engineering. I enjoy shaping the interface, connecting the moving parts, and refining the small details that make a product feel effortless.</p>
-                    <p>I'm currently studying for my Advanced Diploma in Software Engineering while building and shipping live projects. Each launch is a chance to learn, improve, and solve a new kind of problem.</p>
-                    <div class="about-info">
-                        <div class="info-item">
-                            <span class="info-label">Name</span>
-                            <span class="info-value">Goodluck Paul Okoro</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">School</span>
-                            <span class="info-value">Aptech</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Program</span>
-                            <span class="info-value">ADSE - Advanced Diploma in Software Engineering</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Focus</span>
-                            <span class="info-value">Web experiences &amp; full-stack products</span>
-                        </div>
-                    </div>
-                    <a href="#contact" class="btn btn-primary">Let's make something useful <span aria-hidden="true">↗</span></a>
-                </div>
-                <div class="about-cards scroll-reveal">
-                    <div class="about-card">
-                        <div class="about-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                        </div>
-                        <h3>From idea to launch</h3>
-                        <p>Planning, building, and shipping projects that solve a real need.</p>
-                    </div>
-                    <div class="about-card">
-                        <div class="about-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
-                        </div>
-                        <h3>Human-friendly design</h3>
-                        <p>Making the next step feel clear, inviting, and easy to use.</p>
-                    </div>
-                    <div class="about-card">
-                        <div class="about-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                        </div>
-                        <h3>Every screen matters</h3>
-                        <p>Building responsive experiences that work across devices.</p>
-                    </div>
-                    <div class="about-card">
-                        <div class="about-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                        </div>
-                        <h3>Keep getting better</h3>
-                        <p>Learning through feedback, iteration, and each new launch.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="section section-white" id="education">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <span class="badge">02 / Learning</span>
-                <h2 class="section-title">Always learning, <span>always building.</span></h2>
-                <div class="divider"></div>
-            </div>
-            <div class="timeline scroll-reveal">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2024 - Present</span>
-                        <h3>Advanced Diploma in Software Engineering (ADSE)</h3>
-                        <p class="timeline-org">Aptech Computer Education</p>
-                        <p>Currently pursuing an intensive diploma program covering full-stack development, database management, object-oriented programming, mobile development, and software engineering best practices.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Self-Study</span>
-                        <h3>Continuous Learning</h3>
-                        <p class="timeline-org">Online Platforms & Documentation</p>
-                        <p>Constantly expanding knowledge through self-directed learning in modern frameworks, design patterns, cloud technologies, and emerging development tools.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section section-light" id="skills">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <span class="badge">03 / Toolkit</span>
-                <h2 class="section-title">Tools behind <span>the work.</span></h2>
-                <div class="divider"></div>
-            </div>
-            <div class="skills-wrapper scroll-reveal">
-                <div class="skills-block">
-                    <h3 class="skills-subtitle">Used in recent projects</h3>
-                    <p class="skills-desc">A practical mix of frontend, backend, and content tools.</p>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
-                            <span class="skill-name">HTML &amp; CSS</span>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6"></path><path d="M8 6l-6 6 6 6"></path></svg></div>
-                            <span class="skill-name">React</span>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6"></path><path d="M8 6l-6 6 6 6"></path></svg></div>
-                            <span class="skill-name">JavaScript</span>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6"></path><path d="M8 6l-6 6 6 6"></path></svg></div>
-                            <span class="skill-name">TypeScript</span>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
-                            <span class="skill-name">Node &amp; Express</span>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div>
-                            <span class="skill-name">Tailwind CSS</span>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg></div>
-                            <span class="skill-name">UI Design</span>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></div>
-                            <span class="skill-name">Supabase</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills-block">
-                    <h3 class="skills-subtitle">Also exploring</h3>
-                    <p class="skills-desc">Foundations and technologies I'm continuing to develop.</p>
-                    <div class="tech-badges">
-                        <span class="tech-badge">Java</span>
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">OOP</span>
-                        <span class="tech-badge">Flutter & Dart</span>
-                        <span class="tech-badge">Agile DevOps</span>
-                        <span class="tech-badge">C</span>
-                        <span class="tech-badge">C#</span>
-                        <span class="tech-badge">MongoDB</span>
-                        <span class="tech-badge">XML & JSON</span>
-                        <span class="tech-badge">Spring & Spring Boot</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section section-white" id="projects">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <span class="badge">04 / Selected work</span>
-                <h2 class="section-title">Made to be <span>used.</span></h2>
-                <div class="divider"></div>
-                <p class="projects-intro">Three live projects with very different goals: selling event tickets, publishing community content, and turning a simple invitation into an experience.</p>
-            </div>
-            <div class="projects-grid" id="projects-grid">
-                <article class="project-card scroll-reveal">
-                    <div class="project-image project-image--prom">
-                        <img src="images/prom-ticketing.png" alt="Blue and gold poster for the 2K26 Prom Night" loading="lazy">
-                        <span class="project-status"><span class="status-dot"></span>Live</span>
-                        <span class="project-number">01</span>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-meta">
-                            <span class="project-type">Full-Stack Platform</span>
-                            <span class="project-year">2026</span>
-                        </div>
-                        <h3>2K26 Prom Night Ticketing</h3>
-                        <p>An end-to-end event ticketing system with registration, payment receipt uploads, admin approval, QR ticket generation, attendee search, analytics, and scanner-based check-in.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Express</span>
-                            <span>Supabase</span>
-                            <span>Tailwind CSS</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://www.thepromcalabar.com/" target="_blank" rel="noopener noreferrer" class="project-action project-action-primary" aria-label="Visit the live 2K26 Prom Night Ticketing website">
-                                Visit live site
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-                            </a>
-                            <a href="https://github.com/Gokoro-17/PromTicketing" target="_blank" rel="noopener noreferrer" class="project-action project-action-secondary" aria-label="View the PromTicketing source code on GitHub">
-                                GitHub
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.3 4 5 5 0 0 0 19.1.5S17.9.1 15 2a13.4 13.4 0 0 0-7 0C5.1.1 3.9.5 3.9.5A5 5 0 0 0 3.7 4a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.5 6.6 6.8 7A4.8 4.8 0 0 0 8 18v4m-1-6c-5 1.5-5-2.5-7-3"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card scroll-reveal">
-                    <div class="project-image project-image--mcn">
-                        <img src="images/mcn-diocese.jpg" alt="Methodist Church Nigeria emblem" loading="lazy" class="project-image-logo">
-                        <span class="project-status"><span class="status-dot"></span>Live</span>
-                        <span class="project-number">02</span>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-meta">
-                            <span class="project-type">Content Platform</span>
-                            <span class="project-year">2026</span>
-                        </div>
-                        <h3>Methodist Cathedral of Favour</h3>
-                        <p>A responsive church platform with sermons, events, leadership, gallery, giving, and a secure Supabase-backed dashboard for publishing and managing live content.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>TypeScript</span>
-                            <span>Supabase</span>
-                            <span>Tailwind CSS</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://mcn-diocese-website.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action project-action-primary" aria-label="Visit the live Methodist Cathedral of Favour website">
-                                Visit live site
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-                            </a>
-                            <a href="https://github.com/Gokoro-17/mcn-diocese-website" target="_blank" rel="noopener noreferrer" class="project-action project-action-secondary" aria-label="View the mcn-diocese-website source code on GitHub">
-                                GitHub
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.3 4 5 5 0 0 0 19.1.5S17.9.1 15 2a13.4 13.4 0 0 0-7 0C5.1.1 3.9.5 3.9.5A5 5 0 0 0 3.7 4a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.5 6.6 6.8 7A4.8 4.8 0 0 0 8 18v4m-1-6c-5 1.5-5-2.5-7-3"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card scroll-reveal">
-                    <div class="project-image project-image--date">
-                        <img src="images/date-invitation.png" alt="Portrait featured in the interactive date invitation" loading="lazy">
-                        <span class="project-status"><span class="status-dot"></span>Live</span>
-                        <span class="project-number">03</span>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-meta">
-                            <span class="project-type">Interactive Frontend</span>
-                            <span class="project-year">2026</span>
-                        </div>
-                        <h3>Date Invitation</h3>
-                        <p>A playful, mobile-first invitation experience that guides a guest through date, time, food, and activity choices before creating a shareable plan with animations and confetti.</p>
-                        <div class="project-tech">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>Web Share API</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://date-invitation.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action project-action-primary" aria-label="Visit the live Date Invitation website">
-                                Visit live site
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-                            </a>
-                            <a href="https://github.com/Gokoro-17/DateInvitation" target="_blank" rel="noopener noreferrer" class="project-action project-action-secondary" aria-label="View the DateInvitation source code on GitHub">
-                                GitHub
-                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.3 4 5 5 0 0 0 19.1.5S17.9.1 15 2a13.4 13.4 0 0 0-7 0C5.1.1 3.9.5 3.9.5A5 5 0 0 0 3.7 4a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.5 6.6 6.8 7A4.8 4.8 0 0 0 8 18v4m-1-6c-5 1.5-5-2.5-7-3"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Approach Section -->
-    <section class="section section-light" id="services">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <span class="badge">05 / Approach</span>
-                <h2 class="section-title">Good products need <span>good thinking.</span></h2>
-                <div class="divider"></div>
-                <p class="projects-intro">I care about how a product looks, how it works, and how it feels to the person using it.</p>
-            </div>
-            <div class="services-grid scroll-reveal">
-                <div class="service-card">
-                    <span class="service-number">01</span>
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                    </div>
-                    <h3>Make it clear</h3>
-                    <p>Start with the people using it. Organize content, simplify the journey, and design interfaces that make the next step obvious.</p>
-                </div>
-                <div class="service-card">
-                    <span class="service-number">02</span>
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    </div>
-                    <h3>Build it well</h3>
-                    <p>Connect polished frontends with the data and workflows they need, from content dashboards to registration and ticketing.</p>
-                </div>
-                <div class="service-card">
-                    <span class="service-number">03</span>
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-                    </div>
-                    <h3>Keep improving</h3>
-                    <p>Test the experience across screen sizes, polish the details, and keep learning from what happens after launch.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section class="section section-dark" id="resume">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <span class="badge badge-dark">06 / Resume</span>
-                <h2 class="section-title text-light">Want the full picture?</h2>
-                <div class="divider divider-light"></div>
-            </div>
-            <div class="resume-content scroll-reveal">
-                <p class="text-secondary-light">My resume brings my learning, skills, and project experience together in one place.</p>
-                <a href="images/goodluck_paul_okoro_enhanced_resume.pdf" class="btn btn-primary btn-large" download>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    Download Resume
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section class="section section-white" id="certifications">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <span class="badge">07 / Milestones</span>
-                <h2 class="section-title">Learning along <span>the way.</span></h2>
-                <div class="divider"></div>
-            </div>
-            <div class="cert-grid scroll-reveal">
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-                    </div>
-                    <h3>HTML & CSS Fundamentals</h3>
-                    <p>Aptech Certified</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-                    </div>
-                    <h3>Java Programming</h3>
-                    <p>Aptech Certified</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-                    </div>
-                    <h3>Database Management</h3>
-                    <p>Aptech Certified</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-                    </div>
-                    <h3>UI/UX Design Principles</h3>
-                    <p>Aptech Certified</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section section-light" id="testimonials">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <span class="badge">08 / Kind words</span>
-                <h2 class="section-title">Better work <span>happens together.</span></h2>
-                <div class="divider"></div>
-            </div>
-            <div class="testimonials-grid scroll-reveal">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path></svg>
-                    </div>
-                    <p class="testimonial-text">Goodluck is a dedicated student with exceptional problem-solving skills. His ability to grasp complex programming concepts quickly and apply them to real projects is impressive.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">GN</div>
-                        <div class="testimonial-info">
-                            <h4>Mr. Godwin Nathan</h4>
-                            <span>Aptech Faculty</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path></svg>
-                    </div>
-                    <p class="testimonial-text">Working with Goodluck on our group project was a great experience. He delivered quality code on time and his UI designs were clean and user-friendly.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">RI</div>
-                        <div class="testimonial-info">
-                            <h4>Rapha Ibiang</h4>
-                            <span>Coursemate, Aptech</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section section-white" id="contact">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <span class="badge">09 / Contact</span>
-                <h2 class="section-title">Have something <span>in mind?</span></h2>
-                <div class="divider"></div>
-            </div>
-            <div class="contact-grid scroll-reveal">
-                <div class="contact-info">
-                    <h3>Let's talk about it.</h3>
-                    <p>A new idea, an existing product, or simply a conversation about working together — I'd love to hear from you.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            </div>
-                            <div>
-                                <span class="contact-label">Phone</span>
-                                <a href="tel:09161480572" class="contact-value">09161480572</a>
+                <div class="project-list">
+                    <article class="project">
+                        <a class="project-image project-image-prom" href="https://www.thepromcalabar.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the Prom Night Ticketing website">
+                            <img src="images/prom-ticketing.png" alt="Prom Night event artwork" loading="lazy">
+                        </a>
+                        <div class="project-content">
+                            <div class="project-topline"><span>01 / 03</span><span>Full-stack application · 2026</span></div>
+                            <h3>Prom Night<br>Ticketing</h3>
+                            <p>A ticketing flow for registration, receipt review, QR tickets, attendee lookup, and check-in. Built to help an event team manage the whole process in one place.</p>
+                            <p class="project-stack">React · Express · Supabase · Tailwind CSS</p>
+                            <div class="project-links">
+                                <a href="https://www.thepromcalabar.com/" target="_blank" rel="noopener noreferrer">Live site <span aria-hidden="true">↗</span></a>
+                                <a href="https://github.com/Gokoro-17/PromTicketing" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">↗</span></a>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            </div>
-                            <div>
-                                <span class="contact-label">Email</span>
-                                <a href="mailto:gokoro852@gmail.com" class="contact-value">gokoro852@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg>
-                            </div>
-                            <div>
-                                <span class="contact-label">Collaboration</span>
-                                <span class="contact-value">Remote-friendly &amp; open to opportunities</span>
+                    </article>
+
+                    <article class="project">
+                        <a class="project-image project-image-mcn" href="https://mcn-diocese-website.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open the Methodist Cathedral of Favour website">
+                            <img src="images/mcn-diocese.jpg" alt="Methodist Church Nigeria emblem" loading="lazy">
+                        </a>
+                        <div class="project-content">
+                            <div class="project-topline"><span>02 / 03</span><span>Content platform · 2026</span></div>
+                            <h3>Methodist Cathedral<br>of Favour</h3>
+                            <p>A church website for sermons, events, leadership, and updates, with a dashboard that lets the team manage published content.</p>
+                            <p class="project-stack">React · TypeScript · Supabase · Tailwind CSS</p>
+                            <div class="project-links">
+                                <a href="https://mcn-diocese-website.vercel.app/" target="_blank" rel="noopener noreferrer">Live site <span aria-hidden="true">↗</span></a>
+                                <a href="https://github.com/Gokoro-17/mcn-diocese-website" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">↗</span></a>
                             </div>
                         </div>
+                    </article>
+
+                    <article class="project">
+                        <a class="project-image project-image-date" href="https://date-invitation.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open the Date Invitation website">
+                            <img src="images/date-invitation.png" alt="Preview of the interactive Date Invitation" loading="lazy">
+                        </a>
+                        <div class="project-content">
+                            <div class="project-topline"><span>03 / 03</span><span>Interactive website · 2026</span></div>
+                            <h3>Date<br>Invitation</h3>
+                            <p>A small, playful web experience where a guest chooses the details of a date and gets a shareable plan at the end.</p>
+                            <p class="project-stack">HTML · CSS · JavaScript · Web Share API</p>
+                            <div class="project-links">
+                                <a href="https://date-invitation.vercel.app/" target="_blank" rel="noopener noreferrer">Live site <span aria-hidden="true">↗</span></a>
+                                <a href="https://github.com/Gokoro-17/DateInvitation" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-section" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-index">02 / About</p>
+                    <h2 id="about-title">A little about me</h2>
+                </div>
+                <div class="about-layout">
+                    <p class="about-lead">I'm a software engineering student at Aptech, and I like working on products where the interface and the underlying workflow both matter.</p>
+                    <div class="about-detail">
+                        <p>My recent work has taken me from event ticketing to content management and interactive web experiences. I enjoy figuring out what a product needs, building it, and improving the parts that make it easier to use.</p>
+                        <div class="about-note">
+                            <span>Education</span>
+                            <p>Advanced Diploma in Software Engineering (ADSE)<br>Aptech Computer Education · 2024–present</p>
+                        </div>
+                        <a class="underlined-link" href="images/goodluck_paul_okoro_enhanced_resume.pdf" download>Download my résumé <span aria-hidden="true">↗</span></a>
                     </div>
                 </div>
-                <div class="contact-form-wrapper">
-                    <form action="https://formspree.io/f/mlgzrooa"
-                        method="post"
-                        class="contact-form"
-                        id="contact-form"
-                        novalidate>
-                        
-                        <div class="form-group">
+            </div>
+        </section>
+
+        <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-index">03 / Skills</p>
+                    <div>
+                        <h2 id="skills-title">What I work with</h2>
+                        <p>Tools used in recent projects, plus technologies I'm continuing to learn.</p>
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="skills-row"><span>01</span><h3>Frontend</h3><p>HTML, CSS, JavaScript, TypeScript, React, Tailwind CSS</p></div>
+                    <div class="skills-row"><span>02</span><h3>Backend &amp; data</h3><p>Node.js, Express, Supabase, APIs</p></div>
+                    <div class="skills-row"><span>03</span><h3>Also learning</h3><p>Java, Python, Flutter &amp; Dart, MongoDB</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-index">04 / Contact</p>
+                    <h2 id="contact-title">Have a project to discuss?</h2>
+                </div>
+                <div class="contact-layout">
+                    <div class="contact-copy">
+                        <p>I'm open to freelance work, internships, and collaborations. Send me a note with a little about what you're working on.</p>
+                        <a class="contact-email" href="mailto:gokoro852@gmail.com">gokoro852@gmail.com <span aria-hidden="true">↗</span></a>
+                        <a class="contact-phone" href="tel:+2349161480572">+234 916 148 0572</a>
+                    </div>
+                    <form class="contact-form" action="https://formspree.io/f/mlgzrooa" method="post">
+                        <div class="form-row">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" aria-describedby="name-error" required>
-                            <span class="error-message" id="name-error" aria-live="polite"></span>
+                            <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required minlength="2">
                         </div>
-                        <div class="form-group">
+                        <div class="form-row">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" aria-describedby="email-error" required>
-                            <span class="error-message" id="email-error" aria-live="polite"></span>
+                            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
                         </div>
-                        <div class="form-group">
+                        <div class="form-row">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Project inquiry" aria-describedby="subject-error" required>
-                            <span class="error-message" id="subject-error" aria-live="polite"></span>
+                            <input id="subject" name="subject" type="text" placeholder="What is this about?" required minlength="3">
                         </div>
-                        <div class="form-group">
+                        <div class="form-row">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." aria-describedby="message-error" required></textarea>
-                            <span class="error-message" id="message-error" aria-live="polite"></span>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell me about your idea" required minlength="10"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-full" id="submit-btn">Send Message</button>
+                        <button class="button button-light form-submit" type="submit">Send message <span aria-hidden="true">↗</span></button>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer" id="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#home" class="footer-logo">GPO</a>
-                    <p class="footer-tagline">Useful products, thoughtful details, and a little curiosity in every build.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="#services">My approach</a></li>
-                        <li><a href="#education">Learning path</a></li>
-                        <li><a href="#certifications">Milestones</a></li>
-                        <li><a href="#resume">Resume</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Connect</h4>
-                    <div class="footer-social-links">
-                        <a href="https://github.com/Gokoro-17" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
-                        <a href="https://www.linkedin.com/in/goodluck-okoro-ba6459393" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-                        <a href="https://wa.me/2347019127986" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
-                        <a href="mailto:gokoro852@gmail.com" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Goodluck Paul Okoro. All rights reserved.</p>
-                <p>Built with HTML, CSS & JavaScript</p>
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <a class="footer-wordmark" href="#top">Goodluck Okoro<span aria-hidden="true">.</span></a>
+            <a class="back-to-top" href="#top">Back to top ↑</a>
+        </div>
+        <div class="container footer-bottom">
+            <p>© <span id="year">2026</span> Goodluck Paul Okoro</p>
+            <div class="footer-links">
+                <a href="https://github.com/Gokoro-17" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                <a href="https://www.linkedin.com/in/goodluck-okoro-ba6459393" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                <a href="https://wa.me/2347019127986" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
             </div>
         </div>
     </footer>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-    </button>
-
-    <script src="script.js"></script>
 </body>
 </html>
