@@ -10,13 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.getElementById('navbar');
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
+    const themeToggle = document.getElementById('theme-toggle');
     const navLinks = document.querySelectorAll('.nav-link');
     const backToTop = document.getElementById('back-to-top');
     const yearSpan = document.getElementById('year');
     const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
     const contactForm = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
-    const formSuccess = document.getElementById('form-success');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     // ============================================
     // SET CURRENT YEAR IN FOOTER
@@ -25,21 +26,56 @@ document.addEventListener('DOMContentLoaded', function() {
         yearSpan.textContent = new Date().getFullYear();
     }
 
+    function updateThemeLabel() {
+        if (themeToggle) {
+            themeToggle.setAttribute('aria-label', document.documentElement.dataset.theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+        }
+    }
+
+    if (themeToggle) {
+        updateThemeLabel();
+        themeToggle.addEventListener('click', function() {
+            const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+            document.documentElement.dataset.theme = nextTheme;
+            try { localStorage.setItem('portfolio-theme', nextTheme); } catch (error) { /* The theme still works for this visit. */ }
+            updateThemeLabel();
+        });
+    }
+
     // ============================================
     // MOBILE MENU TOGGLE
     // ============================================
     if (navToggle && navMenu) {
+        function closeMenu() {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', 'Open navigation');
+        }
+
         navToggle.addEventListener('click', function() {
-            navToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
+            const isOpen = navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active', isOpen);
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+            navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+            if (isOpen) navLinks[0]?.focus();
         });
 
         // Close mobile menu when a link is clicked
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                navToggle.classList.remove('active');
-                navMenu.classList.remove('active');
+                closeMenu();
             });
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMenu();
+                navToggle.focus();
+            }
+        });
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) closeMenu();
         });
     }
 
@@ -71,11 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // NAVBAR BACKGROUND ON SCROLL
     // ============================================
     function handleNavbarScroll() {
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
-        } else {
-            navbar.style.boxShadow = 'none';
-        }
+        if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 30);
     }
 
     // ============================================
@@ -93,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
         backToTop.addEventListener('click', function() {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth'
+                behavior: prefersReducedMotion.matches ? 'auto' : 'smooth'
             });
         });
     }
@@ -101,22 +133,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // SCROLL REVEAL ANIMATION (IntersectionObserver)
     // ============================================
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
-                // Optionally unobserve after reveal
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
-
-    scrollRevealElements.forEach(el => {
-        revealObserver.observe(el);
-    });
+    if ('IntersectionObserver' in window && !prefersReducedMotion.matches) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+        scrollRevealElements.forEach(el => revealObserver.observe(el));
+    } else {
+        scrollRevealElements.forEach(el => el.classList.add('revealed'));
+    }
 
     // ============================================
     // CONTACT FORM VALIDATION
@@ -171,11 +200,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (error) {
             field.element.classList.add('error');
             field.element.classList.remove('success');
+            field.element.setAttribute('aria-invalid', 'true');
             field.error.textContent = error;
             return false;
         } else {
             field.element.classList.remove('error');
             field.element.classList.add('success');
+            field.element.setAttribute('aria-invalid', 'false');
             field.error.textContent = '';
             return true;
         }
@@ -211,28 +242,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Form submission
     if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        if (!validateForm()) {
-            e.preventDefault();
-
-            contactForm.style.transform = 'translateX(5px)';
-            setTimeout(() => {
-                contactForm.style.transform = 'translateX(-5px)';
-                setTimeout(() => {
-                    contactForm.style.transform = 'translateX(5px)';
-                    setTimeout(() => {
-                        contactForm.style.transform = 'translateX(0)';
-                    }, 100);
-                }, 100);
-            }, 100);
-        } else {
+        contactForm.addEventListener('submit', function(e) {
+            if (!validateForm()) {
+                e.preventDefault();
+                contactForm.querySelector('[aria-invalid="true"]')?.focus();
+                return;
+            }
             if (submitBtn) {
                 submitBtn.textContent = 'Sending...';
                 submitBtn.disabled = true;
             }
-        }
-    });
-}
+        });
+    }
 
     // ============================================
     // SCROLL EVENT LISTENER
@@ -272,21 +293,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 window.scrollTo({
                     top: targetPosition,
-                    behavior: 'smooth'
+                    behavior: prefersReducedMotion.matches ? 'auto' : 'smooth'
                 });
             }
         });
     });
 
-    // ============================================
-    // RESUME DOWNLOAD HANDLER (Placeholder)
-    // ============================================
-    const resumeBtn = document.querySelector('a[href="app/images/Goodluck_Paul_Okoro_Enhanced_Resume.pdf"]');
-    if (resumeBtn) {
-        resumeBtn.addEventListener('click', function(e) {
-            // If resume.pdf doesn't exist, show a friendly alert
-            // In production, this would download the actual file
-            console.log('Resume download clicked - ensure app/images/Goodluck_Paul_Okoro_Enhanced_Resume.pdf exists in the same directory');
-        });
-    }
 });
