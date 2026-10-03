@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="600" viewBox="0 0 816 600">
+  <rect width="816" height="600" fill="#141414"/>
+  <text x="64" y="86" fill="#f4f4ef" font-family="Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="-1">E-Vote</text>
+  <text x="64" y="118" fill="#9a9a95" font-family="Arial, sans-serif" font-size="14" letter-spacing="3">EVERY VOICE COUNTS</text>
+  <g fill="none" stroke="#f4f4ef" stroke-width="5" stroke-linejoin="round">
+    <path d="M278 322h260l38 54v114H240V376z"/>
+    <path d="M240 376h336M342 350h132"/>
+    <rect x="342" y="177" width="132" height="157" rx="8" fill="#141414" transform="rotate(-12 408 256)"/>
+  </g>
+  <path d="m376 251 21 20 39-44" fill="none" stroke="#f4f4ef" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="64" y="552" fill="#9a9a95" font-family="Arial, sans-serif" font-size="14" letter-spacing="2">ONLINE VOTING PLATFORM</text>
+</svg>
