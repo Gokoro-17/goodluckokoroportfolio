@@ -23,6 +23,8 @@ button, input, textarea { font: inherit; }
 button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
+.icon { display: inline-block; width: 1em; height: 1em; flex-shrink: 0; fill: currentColor; vertical-align: -.125em; }
+.brand-icon { width: 20px; height: 20px; }
 ::selection { background: var(--text); color: var(--background); }
 :focus-visible { outline: 2px solid var(--text); outline-offset: 5px; }
 .container { width: min(calc(100% - 96px), var(--page-width)); margin-inline: auto; }
@@ -47,7 +49,7 @@ img { display: block; max-width: 100%; }
 .site-nav a { font-size: .875rem; color: var(--muted); transition: color .2s ease; }
 .site-nav a:hover, .site-nav a:focus-visible { color: var(--text); }
 .site-nav .nav-resume { color: var(--text); margin-left: 14px; }
-.nav-resume span { margin-left: 6px; }
+.nav-resume .icon { margin-left: 6px; }
 .menu-toggle { display: none; }
 
 /* Hero */
@@ -82,7 +84,7 @@ img { display: block; max-width: 100%; }
 .button-light { background: var(--text); color: var(--background); }
 .button-light:hover { background: var(--background); color: var(--text); }
 .text-link, .underlined-link { font-size: .9rem; font-weight: 600; border-bottom: 1px solid var(--muted); padding-bottom: 4px; }
-.text-link span, .underlined-link span { margin-left: 10px; }
+.text-link .icon, .underlined-link .icon { margin-left: 10px; }
 .text-link:hover, .underlined-link:hover { border-color: var(--text); }
 .hero-portrait {
     margin: 0; align-self: center; justify-self: end; width: 100%; max-width: 480px;
@@ -94,6 +96,7 @@ img { display: block; max-width: 100%; }
     color: var(--subtle); text-transform: uppercase; border-top: 1px solid var(--line);
     padding: 20px 0; margin-top: 56px;
 }
+.hero-bottom .icon { margin-left: 6px; }
 
 /* Sections */
 .section { padding: clamp(95px, 11vw, 160px) 0; border-bottom: 1px solid var(--line); }
@@ -138,7 +141,7 @@ img { display: block; max-width: 100%; }
 .project-links { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 38px; }
 .project-links a { font-size: .9rem; font-weight: 700; border-bottom: 1px solid var(--subtle); padding-bottom: 5px; }
 .project-links a:hover { border-color: var(--text); }
-.project-links span { margin-left: 8px; }
+.project-links .icon { margin-left: 8px; }
 
 /* About */
 .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(55px, 8vw, 130px); }
@@ -165,8 +168,9 @@ img { display: block; max-width: 100%; }
 .contact-copy > p { max-width: 440px; margin: 0 0 46px; color: #bdbdb9; font-size: 1.1rem; line-height: 1.75; }
 .contact-email { display: inline-block; max-width: 100%; overflow-wrap: anywhere; font-size: clamp(1.25rem, 2.3vw, 2rem); letter-spacing: -.045em; border-bottom: 1px solid var(--muted); padding-bottom: 6px; }
 .contact-email:hover { border-color: var(--text); }
-.contact-email span { font-size: 1rem; margin-left: 8px; }
+.contact-email .icon { font-size: 1rem; margin-left: 8px; }
 .contact-phone { display: block; width: fit-content; color: var(--muted); margin-top: 20px; }
+.contact-phone .icon { margin-right: 6px; }
 .contact-phone:hover { color: var(--text); }
 .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 22px; }
 .form-row { min-width: 0; }
@@ -188,9 +192,11 @@ img { display: block; max-width: 100%; }
 .footer-wordmark { font-size: clamp(2rem, 3vw, 3.2rem); }
 .back-to-top { font-size: .82rem; color: var(--muted); }
 .back-to-top:hover { color: var(--text); }
+.back-to-top .icon { margin-left: 8px; }
 .footer-bottom { border-top: 1px solid var(--line); padding-top: 23px; color: var(--subtle); font-size: .78rem; }
 .footer-bottom p { margin: 0; }
 .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-links a { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; color: var(--muted); }
 .footer-links a:hover { color: var(--text); }
 
 @media (max-width: 1050px) {
@@ -205,8 +211,7 @@ img { display: block; max-width: 100%; }
     .container { width: min(calc(100% - 40px), var(--page-width)); }
     .header-inner { min-height: 68px; }
     .js .menu-toggle { display: flex; align-items: center; gap: 12px; padding: 8px 0 8px 12px; border: 0; background: none; color: var(--text); font-size: .85rem; }
-    .menu-toggle span { font-size: 1.35rem; font-weight: 300; line-height: 1; }
-    .menu-toggle[aria-expanded="true"] span { transform: rotate(45deg); }
+    .menu-toggle .icon { width: 20px; height: 20px; }
     .site-nav {
         position: absolute; top: 68px; left: 0; right: 0;
         padding: 16px 20px 26px; border-bottom: 1px solid var(--line);
