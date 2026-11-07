@@ -136,9 +136,11 @@ img { display: block; max-width: 100%; }
 }
 .project-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
 .project-image:hover img { transform: scale(1.025); }
+.project-image-scentsation { background: #000; }
+.project-image-scentsation img, .project-image-date img { object-fit: contain; object-position: center; }
 .project-image-prom img { object-position: center 34%; }
 .project-image-mcn img { width: 47%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
-.project-image-date img { object-position: center 20%; }
+.project-image-date { background: #fff; }
 .project-content { display: flex; flex-direction: column; align-items: flex-start; }
 .project-topline { display: flex; gap: 28px; flex-wrap: wrap; color: var(--subtle); text-transform: uppercase; }
 .project-content h3 {
